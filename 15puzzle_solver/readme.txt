@@ -1,4 +1,4 @@
-Written by Matthew Feldman - using IDA A* algorithm, this code solves
+Written by MF - using IDA A* algorithm, this code solves
 the 15puzzle for different configurations.  Specifically - Everything not 
 labelled BASE written by MF.
 
