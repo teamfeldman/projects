@@ -1,0 +1,1 @@
+Just make sure the working directory is accurate.  Otherwise just view the markdown pdf.
