@@ -10,6 +10,14 @@ meas_dist = 1
 low_w, high_w, int_w = 4, 312, 4
 low_h, high_h, int_h, int_h2 = 4, 312, 4, 8
 
+### Program reads in speaker coordinate data and sound level as 
+### measured 1 metre away from the speaker.  Sound level at a point is
+### calculated by summing the aggregate sound levels of all the speakers.
+### Stage 4 prints out a pretty picture of the relevant sound lvls on
+### a grid.  Code is self-explanatory when you run as it prints it all.
+
+
+
 # returns euclidean distance for 2 points
 def dist(p1,p2):
     return(sqrt(((p1[0] - p2[0])**2 + (p1[1] - p2[1])**2)))
@@ -60,7 +68,7 @@ def main(args):
                 v_lst.append(v_temp)
     
     Stage1(s_lst[:4], (0,0))
-    #Stage2(s_lst, p_lst)
+    Stage2(s_lst, p_lst)
     Stage3(s_lst[:4], low_w, high_w, int_w, low_h, high_h, int_h)
     Stage4(s_lst[:4], low_w, high_w, int_w, low_h, high_h, int_h2)
     
@@ -109,8 +117,8 @@ def Stage4(s_lst, low_w, high_w, int_w, low_h, high_h, int_h2):
     centre_w = 2; # centre points
     width = range(low_w-centre_w, high_w, int_w)
     height = range(308, 0, -int_h2);
-    #print(list(width))
-    #print(list(height))
+
+    print('\nStage 4\n==========')
     
     for y in height:
         for x in width:
